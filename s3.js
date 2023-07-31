@@ -26,4 +26,27 @@ function uploadFile(file, fileName) {
   return s3.upload(uploadParams).promise();
 }
 
+function getAllFiles() {
+  return new Promise((resolve, reject) => {
+    s3.listObjectsV2({ Bucket: bucketName }, (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data.Contents);
+      }
+    });
+  });
+}
+
+function getFileStream(fileKey) {
+  const downloadParams = {
+    Bucket: bucketName,
+    Key: fileKey,
+  };
+
+  return s3.getObject(downloadParams).createReadStream();
+}
+
 exports.uploadFile = uploadFile;
+exports.getAllFiles = getAllFiles;
+exports.getFileStream = getFileStream;
