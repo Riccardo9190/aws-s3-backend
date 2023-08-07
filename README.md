@@ -1,6 +1,6 @@
 # AWS S3 Back-End
 
-Server-side application for interacting with AWS S3.
+Server-side application for interacting with AWS S3 bucket.
 
 ### Technologies Used:
 
