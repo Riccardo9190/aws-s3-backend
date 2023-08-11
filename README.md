@@ -36,4 +36,3 @@ echo "AWS_BUCKET_SECRET_KEY=<your_secret_key_here>" > .env
 ```
 
 - Run the API with  ```npm run dev```
-
