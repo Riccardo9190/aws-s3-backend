@@ -7,7 +7,7 @@ Server-side application for interacting with AWS S3 bucket.
 - Node.js
 - Express
 
-### To Run Locally
+### To Run Locally (Needs the download of [AWS S3 Front-End](https://github.com/Riccardo9190/aws-s3-frontend))
 
 To run locally, you must have a configured bucket on [AWS](https://aws.amazon.com) S3 service. Once you get it, you can continue the installation procedure.
 
